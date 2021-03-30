@@ -22,7 +22,7 @@ namespace Assignment10Wellingj.Controllers
         }
 
         //index recieves all the parameters it needs to list and sort the teams
-        public IActionResult Index(long? teamobject, long? bowlerobject, string teamtype, int pageNum = 0)
+        public IActionResult Index(long? teamobject, long? bowlerobject, string teamname, int pageNum = 0)
         {
 
             //how many players per team
@@ -48,7 +48,7 @@ namespace Assignment10Wellingj.Controllers
                 TotalNumItems = (bowlerobject == null ? context.Bowlers.Count() :
                     context.Bowlers.Where(x => x.TeamId == bowlerobject).Count())
             },
-                TeamsName = teamtype
+                TeamsName = teamname
            });
         }
         public IActionResult Privacy()

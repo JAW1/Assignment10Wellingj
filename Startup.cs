@@ -55,14 +55,14 @@ namespace Assignment10Wellingj
                 
                 //endpoints created for URL
 
-                endpoints.MapControllerRoute("teamtypepagenum",
-                    "Team/{teamtypeid}/{teamtype}/{pagenum}",
+                endpoints.MapControllerRoute("teamnamepagenum",
+                    "Team/{teamnameid}/{teamname}/{pagenum}",
                     new { Controller = "Home", Action = "Index" });
-                endpoints.MapControllerRoute("teamtypeid",
-                    "Team/{teamtypeid}/{teamtype}",
+                endpoints.MapControllerRoute("teamnameid",
+                    "Team/{teamnameid}/{teamname}",
                     new { Controller = "Home", Action = "Index", pagenum = 1 });
-                endpoints.MapControllerRoute("teamtype",
-                    "{teamtype}",
+                endpoints.MapControllerRoute("teamname",
+                    "{teamname}",
                      new { Controller = "Home", Action = "Index", pagenum = 1 });
                 endpoints.MapControllerRoute("pagenum",
                     "{pagenum}",

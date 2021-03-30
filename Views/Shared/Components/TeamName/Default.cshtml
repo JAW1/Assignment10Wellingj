@@ -4,7 +4,7 @@
 <a class="btn btn-block @(ViewBag.SelectedType == "1" || ViewBag.SelectedType == null ? "btn-primary" : "btn-outline-secondary")" 
    asp-action="Index" 
    asp-controller="Home" 
-   asp-route-teamtype="">Home</a>
+   asp-route-teamname="">Home</a>
 <br />
 @* first line highlights teams when they are selected, other elements tell what to call when button is clicked *@
 @foreach (var x in Model)
@@ -13,6 +13,6 @@
        asp-action="Index"
        asp-controller="Home"
        asp-route-bowlerobject="@x.TeamId"
-       asp-route-teamtype="@x.TeamName">@x.TeamName</a>
+       asp-route-teamname="@x.TeamName">@x.TeamName</a>
        <br />
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Assignment10Wellingj.Components
 {
-    public class TeamTypeViewComponent : ViewComponent
+    public class TeamNameViewComponent : ViewComponent
     {
         //creates the context for program
         private BowlingLeagueContext context;
-        public TeamTypeViewComponent(BowlingLeagueContext ctx)
+        public TeamNameViewComponent(BowlingLeagueContext ctx)
         {
             context = ctx;
         }
@@ -19,7 +19,7 @@ namespace Assignment10Wellingj.Components
         //
         public IViewComponentResult Invoke()
         {
-            ViewBag.SelectedType = RouteData?.Values["teamtype"];
+            ViewBag.SelectedType = RouteData?.Values["teamname"];
 
             //makes sure the teams are distinct and passes the context to where it will list the teams out
             return View(context.Teams
